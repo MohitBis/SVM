@@ -1,0 +1,45 @@
+{% extends 'base_join.html' %}
+{% block content  %}
+<div class="container"> 
+
+<div class="jumbotron">
+<h1 class="display-6">Enter below details to register for course.</h1>
+<h7 class="display-6">All courses are online free courses.<br/></h1>
+<h7 class="display-6">We will send you details of course after registeration is over.<br/></h1>
+<div class="col-md-8 col-md-offset-2">
+<form method="post" action="{% url 'join' %}">
+          {% csrf_token %} 
+          <p><br/></p>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="Name">Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Full Name" name="name">
+               <p class="help-block text-danger"></p>
+            </div>
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+               <p class="help-block text-danger"></p>
+            <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone">
+               <p class="help-block text-danger"></p>
+            </div>
+            <div class="form-group">
+              <label for="Select the course">Select the course:</label>
+              <select name="course">
+                <option selected="selected"  disabled>Select the course:</option>
+                <option value="Sanskritam">Sanskritam</option>
+                <option value="BhagavadGita">BhagavadGita</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Bengali">Bengali</option>
+              </select>
+            </div>             
+            <div class="form-group">
+              <input type="submit" class="btn btn-warning" value="Submit">
+              <p class="help-block text-danger"></p>
+            </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,599 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}SVM{% endblock %}</title>
+<meta name="description" content="">
+<meta name="Mohit" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+<link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-touch-icon-72x72.png' %}">
+<link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-touch-icon-114x114.png' %}">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="{% static 'css/style.css' %}" >
+<link rel="stylesheet" type="text/css" href="{% static 'css/prettyPhoto.css' %}">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
+
+
+
+
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+{% block pagecontent %}
+
+<!--     {% if messages %}
+      {%for message in messages%}
+        {{messages}}
+      {% endfor %}
+    {% endif %} -->
+
+
+<!-- Navigation
+    ==========================================-->
+
+
+
+
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i> SVM<strong></strong></a> 
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home" class="page-scroll">Home</a></li>
+        <li><a href="#Learning-section" class="page-scroll">Learning</a></li>
+        <li><a href="#SocialWork-section" class="page-scroll">Social Work</a></li>
+        <li><a href="#Library-section" class="page-scroll">Library</a></li>
+        <li><a href="#Blog-section" class="page-scroll">Blog</a></li>    
+        <li><a href="#FutureProject-section" class="page-scroll">Future project</a></li>
+        <li><a href="#about-section" class="page-scroll">About US</a></li>
+        <li><a href="#Contribution-section" class="page-scroll">Contribution</a></li>
+
+        <!--<li><a href="#JoinUS-section" class="page-scroll">Join US</a></li>-->
+
+        <!--<li><a href="#Gallery-section" class="page-scroll">Gallery</a></li>-->       
+        <!--<li><a href="#QusetionAnswer-section" class="page-scroll">Q/A</a></li>-->
+        <li><a href="#contact-section" class="page-scroll">Contact</a></li>   
+      </ul>
+    </div>
+
+    <!-- /.navbar-collapse --> 
+<!--</div>-->
+</div>
+</div>
+</div>
+</nav>
+  
+<!-- Header -->
+
+<!--<div class="container">-->
+<header class="text-center" name="home">
+  <div class="intro-text">
+    <h1>Swami Vivekananda <strong>Mission</strong></h1>
+    <p>"SERVICE TO MAN IS SERVICE TO GOD"</p>
+    <a href="#Learning-section" class="btn btn-default btn-lg page-scroll">LEARN MORE </a> </div>
+</header>
+
+
+
+
+<!-- {% if messages %}
+  <div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}" role="alert">
+          <p>{{ message }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+{% endif %}
+ -->
+<!-- <div class="container">
+      {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+            <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+   </ul>
+{% endif %}
+</div> -->
+<!--</div>-->
+<!-- Services Section -->
+
+<!--<div class="container ">
+  <header class="text-center" name="home">
+    <div class="intro-text">
+      <h1>Swami Vivekananda <strong>Mission</strong></h1>
+      <p>"SERVICE TO MAN IS SERVICE TO GOD"</p>
+      <a href="#Learning-section" class="btn btn-default btn-lg page-scroll">LEARN MORE </a> </div>
+  </header>
+</div>-->
+
+
+<div id="Learning-section" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Learnings</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>"There is only one purpose in the whole of life — education. Otherwise what is the use of men and women, land and wealth?"</p>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+      <div class="col-md-2 col-sm-6 service"> <i class="fa fa-sun-o"></i>
+        <h4>Sanskritam</h4>
+        <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+        <!--<a class="btn btn-warning" href="Sanskritams.html">Start Learning</a>-->
+        <a class="btn btn-warning" href="joinpage">Start Learning</a>
+      </div>
+      <div class="col-md-2 col-sm-6 service"> <i class="fa fa-sun-o"></i>
+        <h4>Bhagavad Gita</h4>
+        <a class="btn btn-warning" href="joinpage">Start Learning</a>
+      </div>
+      <div class="col-md-2 col-sm-6 service"> <i class="fa fa-sun-o"></i>
+        <h4>English</h4>
+        <a class="btn btn-warning" href="joinpage">Start Learning</a>
+      </div>
+      <div class="col-md-2 col-sm-6 service"> <i class="fa fa-sun-o"></i>
+        <h4>Hindi</h4>
+        <a class="btn btn-warning" href="joinpage">Start Learning</a>
+      </div>
+      <div class="col-md-2 col-sm-6 service"> <i class="fa fa-sun-o"></i>
+        <h4>Tamil</h4>
+        <a class="btn btn-warning" href="joinpage">Start Learning</a>
+      </div>
+      <div class="col-md-2 col-sm-6 service"> <i class="fa fa-sun-o"></i>
+        <h4>Bengali</h4>
+        <a class="btn btn-warning" href="joinpage">Start Learning</a>
+      </div>
+      <div class="row">
+          <div class="col-md-2 col-sm-6 service">
+              <p> <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br /></p>
+          </div>
+      </div>
+
+
+    </div>    
+</div>
+</div>
+<!-- Portfolio Section -->
+
+
+
+<div id="SocialWork-section">
+  <div class="container"><!-- Container -->
+    <div class="section-title text-center center">
+      <h2>Social Work</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>"Practical patriotisms means not a mere sentiment or even emotion of love of the motherland but a passion to serve our fellow-countrymen"</p>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li><a href="#" data-filter=".di">Distribution</a></li>
+            <li><a href="#" data-filter=".ed">Eduction</a></li>
+            <li><a href="#" data-filter=".sw">Swachh Bharat</a></li>
+            <li><a href="#" data-filter=".en">Environment</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      
+
+      <div class="portfolio-items">
+        <div class="col-sm-6 col-md-3 col-lg-3 di">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/D1.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Clothes distribution in village Tilwa</h4>
+                <small>Distribution</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/D1.jpg' %}" class="img-responsive" alt="Distribution"> </a></div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-3 col-lg-3 sw">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/S5.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Swachh Bharat</h4>
+                <small>Swachh Bharat</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/S5.jpg' %}" class="img-responsive" alt="Swachh Bharat"> </a></div>
+          </div>
+        </div>       
+      
+
+        <div class="col-sm-6 col-md-3 col-lg-3 di">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/D2.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Clothes distribution in village Tilwa</h4>
+                <small>Distribution</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/D2.jpg' %}" class="img-responsive" alt="Distribution"> </a></div>
+          </div>
+        </div>
+
+
+          <div class="col-sm-6 col-md-3 col-lg-3 en">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/P11.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Planted more than 100 tree</h4>
+                <small>Environment</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/P11.jpg' %}" class="img-responsive" alt="Environment"> </a></div>
+          </div>
+        </div>      
+
+
+
+          <div class="col-sm-6 col-md-3 col-lg-3 en">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/P10.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Planted more than 100 tree</h4>
+                <small>Environment</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/P10.jpg' %}" class="img-responsive" alt="Environment"> </a></div>
+          </div>
+        </div>  
+
+
+
+
+        <div class="col-sm-6 col-md-3 col-lg-3 sw">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/S8.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Swachh Bharat</h4>
+                <small>Swachh Bharat</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/S8.jpg' %}" class="img-responsive" alt="Swachh Bharat"> </a></div>
+          </div>
+        </div> 
+
+
+
+        <div class="col-sm-6 col-md-3 col-lg-3 ed">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/E1.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Eduction</h4>
+                <small>Eduction</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/E1.jpg' %}" class="img-responsive" alt="Eduction"> </a></div>
+          </div>
+        </div> 
+
+
+        <div class="col-sm-6 col-md-3 col-lg-3 di">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/D5.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Clothes distribution in village Tilwa</h4>
+                <small>Distribution</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/D5.jpg' %}" class="img-responsive" alt="Distribution"> </a></div>
+          </div>
+        </div>
+
+
+
+       <div class="col-sm-6 col-md-3 col-lg-3 ed">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/E2.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Eduction</h4>
+                <small>Eduction</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/E2.jpg' %}" class="img-responsive" alt="Eduction"> </a></div>
+          </div>
+        </div>
+       
+
+
+
+       <div class="col-sm-6 col-md-3 col-lg-3 en">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/P7.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Planted more than 100 trees</h4>
+                <small>Environment</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/P7.jpg' %}" class="img-responsive" alt="Environment"> </a></div>
+          </div>
+        </div>
+       
+       
+
+      <div class="col-sm-6 col-md-3 col-lg-3 sw">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/S10.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Swachh Bharat</h4>
+                <small>Swachh Bharat</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/S10.jpg' %}" class="img-responsive" alt="Swachh Bharat"> </a></div>
+          </div>
+        </div>
+
+
+
+      <div class="col-sm-6 col-md-3 col-lg-3 di">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static '/img/SW/D4.jpg' %}" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Clothes distribution in village Tilwa</h4>
+                <small>Distribution</small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="{% static 'img/SW/D4.jpg' %}" class="img-responsive" alt="Distribution"> </a></div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<div id="Library-section">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Library</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>“Books are infinite in number and time is short. The secret of knowledge is to take what is essential. Take that and try to live up to it.”</p>
+      <p>We welcome you all to come to our libary "Swami Vivekananda Library".</p>
+      <div class="row">
+      <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.937657127221!2d83.70527361479846!3d25.54045348373773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992079920f4433b%3A0x19fa670416f95476!2sSwami%20Vivekananda%20Library!5e0!3m2!1sen!2sin!4v1589211773552!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <!--<iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+      style="border:0" allowfullscreen></iframe>-->
+      <p><br/></p>
+      <a class="btn btn-warning" href="libary">E-Libary</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- About Section -->
+<div id="Blog-section">
+  <div class="text-center">
+  <div class="container">
+    <div class="section-title text-center center">
+            <p><br/>
+         <br/>
+         <br/>
+         <br/>
+      </p>
+      <h2>Blog</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>“We are what our thoughts have made us; so take care of what you think. Words are secondary. Thoughts live; they travel far.”</p>
+      <p><br />
+      Section where you can read about great personalities, inspiring, motivational and spritiual atricles.</p>
+
+    </div>
+    <div class="row">
+      <a class="btn btn-warning" href="blog">Start reading</a>
+
+    </div>
+  </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="FutureProject-section">
+  <div class="text-center">
+  <div class="container">
+    <div class="section-title text-center center">
+      <p><br/>
+         <br/>
+         <br/>
+      </p> 
+      <h2>Future Project</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>“Arise, awake, stop not till the goal is reached.”</p>
+    </div>
+    <div class="row">
+      <a class="btn btn-warning" href="future">See our future plans</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div id="about-section">
+  <div class="text-center">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>About us</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>“Go from village to village,do good to humanity and to the world at large.”</p>
+      <p>“Swami Vivekananda advocated the philosophy of "Service to Man is Service to God". Inspired by this message, Swami Vivekananda Mission has been doing various programs </br>to carry out "service to humanity is true worship of divinity.”</p>
+    </div>
+    <div class="row">
+      <a class="btn btn-warning" href="about">Read more</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="Contribution-section">
+  <div class="text-center">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Contribution</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>"When I asked god for peace, he showed me how to help others."</p>
+      <p><br/></p>
+      <p>"Contribute us with participating in our activities, Teaching, Donating clothes, Book, Stationary and Others."</p>
+    </div>
+    <div class="row">
+      <a class="btn btn-warning" href="contributepage">Contribute</a>
+      <p><br/>
+         <br/></p>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- Contact Section -->
+<div id="contact-section" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Contact Us</h2>
+      <hr>
+      <p></p>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-4"> <i class="fa fa-map-marker"></i>
+        <p>Reotipur,<br>
+          Ghazipur, UP 232328</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-envelope-o"></i>
+        <p><br>swamivivekanandamission4india@gmail.com</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-phone"></i>
+        <p>  +91 9044352009</p>
+        <p>  +91 9962989449</p>
+      </div>
+      <hr>
+      <div class="clearfix"></div>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+    
+    </div>
+  </div>
+</div>
+</div>
+<div id="social-section">
+  <div class="container">
+    <div class="social">
+      <ul>
+        <li><a href="https://www.facebook.com/shivam.chaubey.750983"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/MissionSwami"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC2MiscE15JpT7A3e2iZb89w?view_as=subscriber"><i class="fa fa-youtube-square"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container">
+    <div class="fnav">
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> -->
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<!--<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/jquery.counterup.js"></script> 
+<script type="text/javascript" src="js/waypoints.js"></script> 
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script>--> 
+
+<script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script type="text/javascript" src="{% static 'js/jquery.1.11.1.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/jquery.counterup.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/waypoints.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/jquery.prettyPhoto.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/jquery.isotope.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/jqBootstrapValidation.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/contact_me.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+<!-- Javascripts
+    ================================================== --> 
+<script type="text/javascript" src="js/main.js"></script>
+{% endblock %}
+</body>
+</html>
