@@ -41,5 +41,6 @@ urlpatterns = [
     url(r'^libary/',views.libary,name='libary'),
     url(r'^about/',views.about,name='about'),
     url(r'^future/',views.future,name='future'),
+    url(r'^index.html/',views.homepage,name='homepage'),
     path('',include('homepage.urls')),
 ]
